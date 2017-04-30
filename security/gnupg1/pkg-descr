@@ -1,0 +1,6 @@
+GnuPG is a complete and free replacement for PGP. The security/gnupg
+port is the modern 2.x branch with support for newer algorithms, but
+the 1.x branch has few dependencies and is sufficient for most PGP
+operations using common algorithms.
+
+WWW: https://www.gnupg.org/

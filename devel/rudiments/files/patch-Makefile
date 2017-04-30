@@ -1,0 +1,20 @@
+--- Makefile.orig	2016-10-03 12:37:06 UTC
++++ Makefile
+@@ -17,9 +17,6 @@ install:
+ 	cd bin $(AND) $(MAKE) install
+ 	cd doc $(AND) $(MAKE) install
+ 	cd man $(AND) $(MAKE) install
+-	$(MKINSTALLDIRS) $(licensedir)
+-	$(CP) COPYING $(licensedir)
+-	$(CHMOD) 0644 $(licensedir)/COPYING
+ 	$(MKINSTALLDIRS) $(prefix)/libdata/pkgconfig
+ 	$(CP) rudiments.pc $(prefix)/libdata/pkgconfig
+ 	$(CHMOD) 644 $(prefix)/libdata/pkgconfig/rudiments.pc
+@@ -30,7 +27,6 @@ uninstall:
+ 	cd bin $(AND) $(MAKE) uninstall
+ 	cd doc $(AND) $(MAKE) uninstall
+ 	cd man $(AND) $(MAKE) uninstall
+-	$(RMTREE) $(licensedir)
+ 	$(RM) $(prefix)/libdata/pkgconfig/rudiments.pc
+ 
+ distclean: clean
